@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Financial Transaction Monitor",
+    "version": "1.0",
+    "description": "Monitor your financial transactions and security settings",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "geolocation"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["track.js"],
+          "run_at": "document_start"
+        }
+      ]
+  }

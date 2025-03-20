@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script src="leaflet.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            width: 460px;
+            margin: 0 auto;
+        }
+
+        a, a:visited, a:hover, a:active {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+}
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .download-button {
+            display: flex;
+            align-items: center;
+            background-color: #e6f7f1;
+            color: #5cceac;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        
+        .download-button svg {
+            margin-right: 8px;
+        }
+        
+        .notification-bell {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        
+        .settings-menu {
+            background-color: #1a66ff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .settings-item {
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .map-container {
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        .flex-wrapper {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="flex-wrapper">
+            <a href="./popup.html">
+                <img src="./navback.png" alt="Go back!" style="height: 2rem; width: auto; margin-right: 0.5rem;">
+            </a>
+            <h1 style="font-size: 1.4rem;">Settings</h1>
+        </div>
+        <div class="header-right">
+            <button class="download-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15L8 11H16L12 15Z" fill="#5cceac"/>
+                    <path d="M12 3V11M12 15L8 11H16L12 15Z" stroke="#5cceac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 17V21H21V17" stroke="#5cceac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                DOWNLOAD APP
+            </button>
+            <svg class="notification-bell" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM18 16V11C18 7.93 16.36 5.36 13.5 4.68V4C13.5 3.17 12.83 2.5 12 2.5C11.17 2.5 10.5 3.17 10.5 4V4.68C7.63 5.36 6 7.92 6 11V16L4 18V19H20V18L18 16Z" fill="black"/>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="settings-menu">
+        <div class="settings-item">CHANGE ACCOUNT</div>
+        <div class="settings-item">TOGGLE GEOBLOCK</div>
+        <div class="settings-item">SET TRANSACTION LIMITS</div>
+        <div class="settings-item">MULTIFACTOR</div>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+    
+    <script src="map.js"></script>
+</body>
+</html>

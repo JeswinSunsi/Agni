@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  body {
+    width: 500px;
+    height: 500px;
+    background-color: #f5f5f7;
+    padding: 16px;
+  }
+  
+
+  a, a:visited, a:hover, a:active {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+}
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .greeting h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+    color: #FFF;
+    margin-top: 4px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f0f8f4;
+    color: #4aa77d;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+  
+  .dashboard-card {
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .dashboard-card.primary {
+    background-color: #2563eb;
+  }
+  
+  .amount {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .stats-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .content-container {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .chart-container {
+    width: 60%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    height: 200px;
+  }
+  
+  .quick-settings {
+    background-color: #2563eb;
+    border-radius: 12px;
+    padding: 16px;
+    color: white;
+    width: 40%;
+  }
+  
+  .quick-settings h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .setting-item {
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .setting-item:hover {
+    opacity: 0.8;
+  }

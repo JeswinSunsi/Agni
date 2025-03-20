@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="greeting">
+      <h2 style="font-size: 1.4rem; font-weight: 700 !important;">Hi <span id="username">Jez</span>!</h2>
+      <p class="subtitle" style="color: #4B4B4B">How are you doing today?</p>
+    </div>
+    <div class="actions">
+      <button id="download-app" class="download-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        DOWNLOAD APP
+      </button>
+      <button id="notifications" class="icon-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="dashboard-card primary">
+    <div class="amount-container">
+      <h1 class="amount">₹68,511.00</h1>
+      <p class="subtitle">Transactions actively monitored</p>
+    </div>
+    <div class="stats-container">
+      <div class="stat">
+        <span class="stat-number">17</span>
+        <span class="stat-label">Sites Checked</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">2</span>
+        <span class="stat-label">Gateways Blocked</span>
+      </div>
+    </div>
+    <div class="logo">
+  <img src="./agnilogo.png" alt="Logo">
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="chart-container">
+        <img src="./chart.png" alt="Transaction Chart">
+    </div>
+    
+    <div class="quick-settings">
+      <a href="./settings.html">
+        <h3>Quick Settings</h3>
+      </a>
+      <div class="settings-list">
+        <div class="setting-item">ACCOUNT</div>
+        <div class="setting-item">GEOBLOCK</div>
+        <div class="setting-item">LIMITS</div>
+        <div class="setting-item">MULTIFACTOR</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</html>
