@@ -1,21 +1,31 @@
 {
     "manifest_version": 3,
-    "name": "Financial Transaction Monitor",
+    "name": "AgniShield",
     "version": "1.0",
-    "description": "Monitor your financial transactions and security settings",
+    "description": "Monitor your financial transactions the easy way",
     "action": {
       "default_popup": "popup.html"
     },
     "permissions": [
       "storage",
       "activeTab",
-      "geolocation"
+      "geolocation",
+      "webNavigation",
+      "webRequest",
+      "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>"
     ],
     "content_scripts": [
-        {
-          "matches": ["<all_urls>"],
-          "js": ["track.js"],
-          "run_at": "document_start"
-        }
-      ]
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
+}
